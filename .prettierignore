@@ -1,0 +1,15 @@
+# Vendors
+**/node_modules/
+
+# Build output
+/dist
+
+# Test results
+/.coverage
+/coverage
+
+# Cache
+/.eslintcache
+
+# Configs
+/.github/
