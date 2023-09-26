@@ -18,12 +18,11 @@
   "exclude": [
     "node_modules",
     "**/node_modules/*",
-    ".serverless/**/*",
     ".webpack/**/*",
-    "_warmup/**/*",
     ".vscode/**/*",
-    "*.config.js",
-    "**/*.js"
+    "**/*.js",
+    "src/**/*.spec.ts",
+    "src/**/*.test.ts"
   ],
   "ts-node": {
     "esm": true,
