@@ -25,6 +25,9 @@ jobs:
       - name: Verify Code
         run: yarn validate
 
+      - name: Unit Test
+        run: yarn test:ci
+
       - name: Build Project
         run: yarn build
 
