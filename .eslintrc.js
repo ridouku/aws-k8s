@@ -11,16 +11,19 @@ module.exports = {
   ignorePatterns: ['setupTests.ts'],
   overrides: [
     {
-      files: '**/*.{ts,tsx}',
+      files: '**/*.{ts}',
       rules: {
         'no-undef': 'off',
       },
     },
     {
-      files: ['**/*{.,_}{test,spec}.{js,jsx,ts,tsx}'],
+      files: ['**/*{.,_}{test,spec}.{js,ts}'],
       rules: {
         'import/no-extraneous-dependencies': 'off',
         'no-console': 'off',
+      },
+      env: {
+        jest: true,
       },
     },
   ],
@@ -67,14 +70,7 @@ module.exports = {
       },
     ],
     'no-nested-ternary': 'off',
-    'no-param-reassign': [
-      'error',
-      {
-        // for redux, setting the state
-        ignorePropertyModificationsFor: ['state'],
-        props: true,
-      },
-    ],
+    'no-param-reassign': 'error',
     'no-redeclare': 'off',
     'no-shadow': 'off',
     'no-underscore-dangle': 'off',
